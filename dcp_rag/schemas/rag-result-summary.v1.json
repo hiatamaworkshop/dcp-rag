@@ -1,0 +1,18 @@
+{
+  "$dcp": "schema",
+  "id": "rag-result-summary:v1",
+  "description": "Stage result summary — compact signal for downstream stages",
+  "fields": ["found", "count", "domain", "avg_score"],
+  "fieldCount": 4,
+  "types": {
+    "found": { "type": "boolean", "description": "Whether relevant results were found" },
+    "count": { "type": "number", "min": 0, "description": "Number of relevant chunks" },
+    "domain": { "type": "string", "description": "Primary topic of results" },
+    "avg_score": { "type": "number", "min": 0, "max": 1, "description": "Average relevance score" }
+  },
+  "examples": [
+    [true, 3, "auth", 0.88],
+    [false, 0, "billing", 0.0],
+    [true, 7, "deployment", 0.72]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$dcp": "schema",
+  "id": "rag-rerank-signal:v1",
+  "description": "Reranking output — position changes and boost reasons",
+  "fields": ["chunk_id", "original_rank", "new_rank", "boost_reason"],
+  "fieldCount": 4,
+  "types": {
+    "chunk_id": { "type": "string", "description": "Chunk identifier" },
+    "original_rank": { "type": "number", "min": 0, "description": "Position before reranking" },
+    "new_rank": { "type": "number", "min": 0, "description": "Position after reranking" },
+    "boost_reason": { "type": ["string", "null"], "enum": ["recency", "exact_match", "domain_boost", "user_history", null], "description": "Why rank changed" }
+  },
+  "examples": [
+    ["chunk_a3f2", 5, 1, "exact_match"],
+    ["chunk_b7c1", 1, 3, null],
+    ["chunk_d9e4", 8, 2, "recency"]
+  ]
+}

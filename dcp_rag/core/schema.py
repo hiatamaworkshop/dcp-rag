@@ -12,8 +12,8 @@ from dataclasses import dataclass, field
 from typing import Any
 
 
-# Default schemas directory: project_root/schemas/
-_SCHEMAS_DIR = Path(__file__).resolve().parent.parent.parent / "schemas"
+# Default schemas directory: dcp_rag/schemas/ (inside the package)
+_SCHEMAS_DIR = Path(__file__).resolve().parent.parent / "schemas"
 
 
 @dataclass(frozen=True)

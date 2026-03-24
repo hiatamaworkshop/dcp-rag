@@ -150,7 +150,7 @@ RAG-specific DCP schemas (planned):
 
 ## Status
 
-Project initialized. Design phase.
+v0.1.0 — Core encoder, 5 DB presets, 4 framework adapters. Unit-tested (72 tests) and integration-tested against live Qdrant with 69% token reduction on real data.
 
 ## Related
 
