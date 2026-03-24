@@ -154,7 +154,6 @@ v0.1.0 — Core encoder, 5 DB presets, 4 framework adapters. Unit-tested (72 tes
 
 ## Related
 
-- [DATA_COST_PROTOCOL.md](docs/DATA_COST_PROTOCOL.md) — Full DCP specification (from engram)
 - [engram](https://github.com/hiatamaworkshop/engram) — Origin project where DCP was developed
 
 ## License
