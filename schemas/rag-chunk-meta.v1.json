@@ -1,0 +1,19 @@
+{
+  "$dcp": "schema",
+  "id": "rag-chunk-meta:v1",
+  "description": "RAG chunk metadata — source location, relevance score, structural position",
+  "fields": ["source", "page", "section", "score", "chunk_index"],
+  "fieldCount": 5,
+  "types": {
+    "source": { "type": "string", "description": "Document path or URI" },
+    "page": { "type": ["number", "null"], "description": "Page number if applicable" },
+    "section": { "type": ["string", "null"], "description": "Section/heading name" },
+    "score": { "type": "number", "min": 0, "max": 1, "description": "Retrieval relevance score" },
+    "chunk_index": { "type": "number", "min": 0, "description": "Position within document" }
+  },
+  "examples": [
+    ["docs/auth.md", null, "JWT Configuration", 0.92, 3],
+    ["contracts/2024-Q1.pdf", 12, "Payment Terms", 0.87, 0],
+    ["api/endpoints.yaml", null, "/users/login", 0.78, 5]
+  ]
+}

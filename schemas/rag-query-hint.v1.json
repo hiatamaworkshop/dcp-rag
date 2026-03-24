@@ -1,0 +1,18 @@
+{
+  "$dcp": "schema",
+  "id": "rag-query-hint:v1",
+  "description": "Inter-stage query signal — what the next stage should look for",
+  "fields": ["intent", "domain", "detail", "urgency"],
+  "fieldCount": 4,
+  "types": {
+    "intent": { "type": "string", "enum": ["find", "compare", "summarize", "verify", "expand"] },
+    "domain": { "type": "string", "description": "Topic area" },
+    "detail": { "type": "string", "description": "Specific aspect or constraint" },
+    "urgency": { "type": "number", "min": 0, "max": 1, "description": "How critical this sub-query is" }
+  },
+  "examples": [
+    ["find", "auth", "JWT expiration policy", 0.9],
+    ["compare", "pricing", "tier A vs tier B limits", 0.6],
+    ["verify", "compliance", "GDPR data retention clause", 1.0]
+  ]
+}
