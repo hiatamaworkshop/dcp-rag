@@ -1,0 +1,128 @@
+{
+  "phi3:mini": {
+    "original": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=add, domain=knowledge:v1"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      }
+    ],
+    "json_array": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=add, domain=knowledge:v1"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      }
+    ]
+  },
+  "gemma2:2b": {
+    "original": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=add, domain=knowledge:v1"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=add, domain=knowledge:v1"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      }
+    ],
+    "json_array": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=Schema header, domain=Data"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "action=add, domain=knowledge"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "action=add, domain=auth"
+      }
+    ]
+  },
+  "llama3.2:1b": {
+    "original": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "In the given data with schema reference:\n\n$S:knowledge:v1#fcbc [expand:GET /schemas/knowledge:v1]\n[\"add\",\"auth\",\"jwt migration fix\",0.8]\n[\"flag\",\"paym"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "To determine the action being performed and the domain in the first row of the data, I'll analyze the schema hint:\n\n$S:knowledge:v1#fcbc [action=add|r"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "To determine the action being performed and the domain associated with each item in the list, we need to analyze the schema definition.\n\nFrom the sche"
+      }
+    ],
+    "json_array": [
+      {
+        "density": "abbreviated",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "Based on the schema header, the first row indicates that an \"add\" action is being performed in the \"auth\" domain.\n\nHere's a breakdown of what's happen"
+      },
+      {
+        "density": "expanded",
+        "pass_rate": "0/3",
+        "passed": false,
+        "sample": "To determine the action being performed and the domain it's being performed on, we can look at the values in the \"action\" column.\n\nThe first row has a"
+      },
+      {
+        "density": "full",
+        "pass_rate": "3/3",
+        "passed": true,
+        "sample": "To determine the action being performed in the first row and in which domain it's being performed, we need to analyze the data.\n\nFrom the schema defin"
+      }
+    ]
+  }
+}
